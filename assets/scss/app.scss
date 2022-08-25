@@ -257,4 +257,12 @@ label {
 	}
 }
 
+section{
+	padding: 8rem 0;
+
+	@media (max-width:991px) {
+		padding: 4rem 0;
+	}
+}
+
 @import "./style";

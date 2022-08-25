@@ -243,7 +243,6 @@
 /*_______________________ Feature Posts _______________________*/
 
 #feature_posts {
-	padding: 8rem 0;
 	background: #fafafa;
 
 	.post {
@@ -370,7 +369,7 @@
 /*_______________________ Categories _______________________*/
 
 #categories {
-	padding-bottom: 8rem;
+	padding-top: 0rem;
 	background: #fafafa;
 
 	h6 {
@@ -454,7 +453,6 @@
 
 /*_______________________ Best Sellers _______________________*/
 #best_sellers {
-	padding: 8rem 0;
 
 	ul {
 		position: relative;
@@ -683,6 +681,7 @@
 
 /*_______________________ Discount Banner _______________________*/
 #discount_banner {
+	padding: 0;
 	.banner {
 		position: relative;
 		width: 100%;
@@ -721,10 +720,8 @@
 	}
 }
 
-
 /*_______________________ Product Promo _______________________*/
 #product_promo {
-	padding: 8rem 0;
 
 	.prd_blk {
 		position: relative;
@@ -805,7 +802,6 @@
 
 /*_______________________ Best Products _______________________*/
 #best_products {
-	padding: 8rem 0;
 	background-color: #fafafa;
 	position: relative;
 
@@ -855,7 +851,7 @@
 			}
 
 			.icon_badge {
-				transform: translateX(-4.3rem);
+				transform: translateX(-4.8rem);
 			}
 
 			.price {
@@ -907,7 +903,7 @@
 				width: 4rem;
 				min-width: 4rem;
 				height: 4rem;
-
+				font-size: 1rem;
 				top: 0.5rem;
 				left: 0.5rem;
 			}
@@ -959,7 +955,7 @@
 		.icon_badge {
 
 			position: absolute;
-			top: 0;
+			top: 0.5rem;
 			right: -4rem;
 			transition: var(--trans);
 
@@ -978,8 +974,7 @@
 			}
 
 			@media (max-width: 991px) {
-				right: 1rem;
-				top: 0.5rem;
+				right: 0.5rem;
 			}
 		}
 
@@ -1013,9 +1008,8 @@
 
 }
 
-/*_______________________ Best Products _______________________*/
+/*_______________________ Upgrade Product _______________________*/
 #upgrad_product {
-	padding: 8rem 0;
 
 	h1 {
 		color: var(--secondary_color);
@@ -1075,8 +1069,85 @@
 			top: 65%;
 		}
 
-		.update_badge_p3{
-			left: 80%;
+		.update_badge_p3 {
+			left: 75%;
+		}
+	}
+}
+
+/*_______________________ Upgrade Product _______________________*/
+#form_blog {
+	background-color: #fafafa;
+
+	h6 {
+		padding-top: 2rem;
+		position: relative;
+		text-align: center;
+		margin-bottom: 3rem;
+		z-index: 10;
+
+		&::after {
+			content: attr(data-name);
+			width: 100%;
+			font-size: 8rem;
+			text-transform: uppercase;
+			opacity: .1;
+			position: absolute;
+			top: -1rem;
+			left: 50%;
+			transform: translate(-50%);
+			z-index: -1;
+
+			@media (max-width:991px) {
+				font-size: 4rem;
+				top: .7rem;
+			}
+		}
+	}
+
+	.blog_card {
+		
+		.blog_img{
+			width: 100%;
+			aspect-ratio: 2/1;
+			overflow: hidden;
+			img{
+				transition: var(--trans);
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		.title{
+			margin-top: 1.5rem;
+			display: block;
+			font-size: 1.8rem;
+			font-weight: 600;
+			text-align: center;
+		}
+		.bottom_blk {
+			margin-top: 1rem;
+			@include flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			p {
+				color: #a5a6ac;
+				@include flex;
+				margin: 0;
+
+				i {
+					margin-right: 0.5rem;
+				}
+			}
+
+			a {
+				color: #a5a6ac;
+				@include flex;
+				&:hover{
+					color: var(--primary_color);
+				}
+			}
 		}
 	}
 }
