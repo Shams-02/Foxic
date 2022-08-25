@@ -580,6 +580,12 @@
 				top: 0;
 				left: 0;
 				transition: var(--trans);
+
+				@media (max-width: 767px) {
+					width: 5.5rem;
+					min-width: 5.5rem;
+					height: 5.5rem;
+				}
 			}
 
 			.new_badge {
@@ -798,7 +804,7 @@
 }
 
 /*_______________________ Best Products _______________________*/
-#best_products{
+#best_products {
 	padding: 8rem 0;
 	background-color: #fafafa;
 	position: relative;
@@ -836,7 +842,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 1.5rem 0;
+		padding: 1.5rem 0.5rem;
 
 
 		&:hover {
@@ -896,6 +902,15 @@
 			top: 0;
 			left: 0;
 			transition: var(--trans);
+
+			@media (max-width: 767px) {
+				width: 4rem;
+				min-width: 4rem;
+				height: 4rem;
+
+				top: 0.5rem;
+				left: 0.5rem;
+			}
 		}
 
 		.new_badge {
@@ -963,7 +978,8 @@
 			}
 
 			@media (max-width: 991px) {
-				right: 0;
+				right: 1rem;
+				top: 0.5rem;
 			}
 		}
 
@@ -987,12 +1003,80 @@
 
 	}
 
-	.bg_img{
+	.bg_img {
 		width: 50rem;
 		position: absolute;
 		top: 50%;
 		right: 0;
-		transform: translate(0,-50%);
+		transform: translate(0, -50%);
 	}
 
+}
+
+/*_______________________ Best Products _______________________*/
+#upgrad_product {
+	padding: 8rem 0;
+
+	h1 {
+		color: var(--secondary_color);
+	}
+
+	.product {
+		position: relative;
+
+		.update_badge {
+			border: transparent;
+			width: 4.8rem;
+			min-width: 4.8rem;
+			height: 4.8rem;
+			background-color: rgba(0, 0, 0, 0.03);
+			@include flex;
+			border-radius: 50%;
+			overflow: hidden;
+			position: absolute;
+			left: 35%;
+			top: 10%;
+
+			@media (max-width: 767px) {
+				width: 3.8rem;
+				min-width: 3.8rem;
+				height: 3.8rem;
+			}
+
+			span {
+				width: 3.2rem;
+				min-width: 3.2rem;
+				height: 3.2rem;
+				overflow: hidden;
+				border-radius: 50%;
+				background-color: var(--primary_color);
+				color: var(--white);
+				font-size: 3rem;
+				@include flex;
+				transition: var(--trans);
+
+
+				@media (max-width: 767px) {
+					width: 2.2rem;
+					min-width: 2.2rem;
+					height: 2.2rem;
+					font-size: 2rem;
+				}
+
+				&:hover {
+					color: var(--primary_color);
+					background-color: var(--white);
+				}
+			}
+		}
+
+		.update_badge_p2 {
+			left: 58%;
+			top: 65%;
+		}
+
+		.update_badge_p3{
+			left: 80%;
+		}
+	}
 }
