@@ -174,6 +174,7 @@
 /*_______________________ Top Slider _______________________*/
 
 #top_swiper {
+	padding: 0;
 	.carousel {
 
 		.carousel-item {
@@ -1171,6 +1172,11 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
+			@media (max-width: 767px) {
+				flex-direction: column;
+				row-gap: 2rem;
+			}
 
 			.footer_logo {
 				width: 12rem;
